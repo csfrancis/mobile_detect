@@ -1,0 +1,25 @@
+language: c
+
+env:
+  - LUA="luajit"
+
+branches:
+  only:
+    - master
+
+install:
+  - sudo apt-get install luajit
+  - sudo apt-get install luarocks
+  - sudo luarocks install busted
+
+before_script:
+  - luarocks --local make PCRE_LIBDIR=/usr/lib/x86_64-linux-gnu
+
+script: "busted test/mobile_detect_test.lua"
+
+notifications:
+  recipients:
+    - scott.francis@shopify.com
+  email:
+    on_success: change
+    on_failure: always
