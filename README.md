@@ -1,5 +1,7 @@
 ##mobile_detect##
 
+[![Build Status](https://travis-ci.org/csfrancis/mobile_detect.png?branch=master)](https://travis-ci.org/csfrancis/mobile_detect)
+
 A simple little Lua library to perform mobile browser detection.
 
 Detection rules were stolen from https://github.com/serbanghita/Mobile-Detect.
