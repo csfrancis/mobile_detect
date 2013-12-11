@@ -2,7 +2,8 @@ package = "mobile_detect"
 version = "1.0-1"
 source = {
   url = "https://github.com/csfrancis/mobile_detect/archive/1.0.tar.gz",
-  dir = "mobile_detect-1.0"
+  dir = "mobile_detect-1.0",
+  md5 = "058685c5c61da312b37bd5c56a296fa8"
 }
 description = {
   summary = "Mobile HTTP browser detection library",
