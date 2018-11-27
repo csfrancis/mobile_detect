@@ -79,7 +79,7 @@ local function check_user_agent_for_match(user_agent, matches)
 end
 
 local function check_headers_for_user_agent_match(http_headers, matches)
-  user_agent = get_user_agent(http_headers)
+  local user_agent = get_user_agent(http_headers)
   if user_agent == nil then return false end
   return check_user_agent_for_match(user_agent, matches)
 end
@@ -89,7 +89,7 @@ M.module_name = "mobile_detect"
 function M.is_mobile(http_headers)
   if check_headers_for_match(http_headers) then return true end
 
-  user_agent = get_user_agent(http_headers)
+  local user_agent = get_user_agent(http_headers)
   if user_agent == nil then return false end
   return check_user_agent_for_match(user_agent, _detect.uaMatch.phones)
     or check_user_agent_for_match(user_agent, _detect.uaMatch.tablets)
